@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Максим  Березинец](https://up.htmlacademy.ru/adaptive/20/user/60877).
-* Наставник: `Неизвестно`.
+* Студент: [Максим  Березинец](https://up.htmlacademy.ru/adaptive/19/user/60877).
+* Наставник: `Анатолий Пазюк`.
 
 ---
 
@@ -24,7 +24,7 @@ _`.editorconfig`, `.gitattributes`, `.gitignore`, `.stylelintrc`, `.travis.yml`,
 
 #### 2. Создайте форк
 
-[Откройте мастер-репозиторий](https://github.com/htmlacademy-adaptive/60877-cat-energy-20) и нажмите кнопку «Fork» в правом верхнем углу. Репозиторий из Академии будет скопирован в ваш аккаунт.
+[Откройте мастер-репозиторий](https://github.com/htmlacademy-adaptive/60877-cat-energy-19) и нажмите кнопку «Fork» в правом верхнем углу. Репозиторий из Академии будет скопирован в ваш аккаунт.
 
 <img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60808133-3a7ace00-a190-11e9-9d29-401b02036a9c.jpg">
 
@@ -54,7 +54,7 @@ git clone SSH-адрес_вашего_форка
 
 Репозиторий создан для обучения на профессиональном онлайн‑курсе «[HTML и CSS, уровень 2](https://htmlacademy.ru/intensive/adaptive)» от [HTML Academy](https://htmlacademy.ru).
 
-[travis-image]: https://travis-ci.com/htmlacademy-adaptive/60877-cat-energy-20.svg?branch=master
-[travis-url]: https://travis-ci.com/htmlacademy-adaptive/60877-cat-energy-20
-[dependency-image]: https://david-dm.org/htmlacademy-adaptive/60877-cat-energy-20/dev-status.svg?style=flat-square
-[dependency-url]: https://david-dm.org/htmlacademy-adaptive/60877-cat-energy-20?type=dev
+[travis-image]: https://travis-ci.com/htmlacademy-adaptive/60877-cat-energy-19.svg?branch=master
+[travis-url]: https://travis-ci.com/htmlacademy-adaptive/60877-cat-energy-19
+[dependency-image]: https://david-dm.org/htmlacademy-adaptive/60877-cat-energy-19/dev-status.svg?style=flat-square
+[dependency-url]: https://david-dm.org/htmlacademy-adaptive/60877-cat-energy-19?type=dev
