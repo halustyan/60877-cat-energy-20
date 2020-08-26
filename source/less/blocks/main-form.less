@@ -469,11 +469,9 @@
     border: 1px solid #e6e6e6;
     max-width: 70%;
     width: 140px;
-    font-size: 14px;
-    line-height: 18px;
     font-size: 16px;
     line-height: 18px;
-    font-family: "Oswald-Regular","Arial",sans-serif;
+    font-family: "Oswald-Regular", "Arial", sans-serif;
   }
 
   .main-form__contact-inputs {
@@ -708,7 +706,7 @@
     font-size: 36px;
     line-height: 36px;
     max-width: 570px;
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 0 38px;
     margin-left: -8px;
   }
@@ -767,7 +765,6 @@
   .main-form__commentary-comment {
     font-size: 36px;
     line-height: 36px;
-    margin-left: 49px;
     max-width: 181px;
     word-break: break-all;
     margin-right: 18px;
@@ -890,7 +887,6 @@
   .main-form__sub-two-checkbox {
     display: flex;
     margin-left: 18px;
-    flex-wrap: wrap;
   }
 
   .main-form__checkbox-label::after {
@@ -1072,7 +1068,6 @@
     max-width: 591px;
     margin-left: -2px;
     margin-bottom: 1px;
-    margin-top: 25px;
     margin-top: 26px;
   }
 
@@ -1085,9 +1080,10 @@
   }
 
   .main-form__contact-inputs-radio-main {
-    display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    display: grid;
+    grid-template-columns: 573px 100%;
   }
 
   .main-form__sub-label-input-name {
@@ -1108,7 +1104,6 @@
   }
 
   .main-form__sub-input-age {
-    padding-right: 0;
     max-width: 418px;
     width: 437px;
     font-size: 20px;
@@ -1170,7 +1165,7 @@
 
   .main-form__contact-data-cat-owner-email {
     margin-left: 0;
-    width: 46.72%;
+    /*width: 46.72%;*/
     align-items: flex-start;
   }
 
@@ -1186,23 +1181,27 @@
   }
 
   .main-form__sub-input-text-email {
-    padding: 9px 160px 11px 17px;
+    padding: 9px 147px 11px 17px;
+  }
+
+  .main-form__contact-data-cat-owner-telephone {
+    margin-left: 26px;
   }
 
   .main-form__email-input-img {
     position: absolute;
-    right: 20px;
+    right: 48px;
     top: 20px;
   }
 
   .main-form__contact__email-plus-phone {
-    display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 597.97px 597.97px;
   }
 
   .main-form__contact-data-cat-owner-telephone {
-    width: 46.72%;
     margin-left: 0;
   }
 
@@ -1254,7 +1253,7 @@
   .main-form__textarea {
     max-width: 1220px;
     padding-right: 20px;
-    margin-top: 40px;
+    margin-top: 42px;
     padding-left: 0;
     margin-left: 0;
   }
@@ -1302,11 +1301,12 @@
   }
 
   .main-form__checkboxes {
-    display: flex;
     margin-left: 0;
     padding-left: 0;
-    margin-top: 54px;
+    margin-top: 51px;
     flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   .main-form__checkbox-label::after {
@@ -1316,6 +1316,8 @@
 
   .main-form__sub-two-checkbox {
     margin-left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   .main-form__checkboxes-sub-input:checked + .main-form__checkbox-label::before {
@@ -1399,6 +1401,10 @@
 
   .main-form__sub-checkbox-vitamines {
     margin-right: 0;
+  }
+
+  .main-form__radio-part {
+    margin-left: 77px;
   }
 }
 
