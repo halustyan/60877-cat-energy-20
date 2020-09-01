@@ -28,7 +28,7 @@ gulp.task("copy", function () {
     .src([
       "source/fonts/**/*.{woff,woff2}",
       "source/img/**/*.webp",
-      "source/js/*.min.js"
+      "source/js/*.min.js",
     ], {
       base: "source"
     })
@@ -86,13 +86,22 @@ gulp.task("css2", function () {
 });
 
 
+gulp.task("css3", function () {
+  return gulp
+    .src("source/css/normalize.css")
+    .pipe(csso())
+    .pipe(gulp.dest("build/css"))
+    .pipe(rename("normalize.min.css"))
+    .pipe(server.stream());
+});
+
 gulp.task("uglify", function () {
   return gulp
     .src(["source/js/*.js", "!*.min.js"])
     .pipe(uglify())
-    .pipe(rename({
+    /*.pipe(rename({
       suffix: '.min'
-    }))
+    }))*/
     .pipe(gulp.dest("build/js"))
 });
 
@@ -140,6 +149,6 @@ gulp.task("server", function () {
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
-gulp.task("build", gulp.series("clear", "copy", "images", "css", "css2", "uglify", "html", "clean"));
+gulp.task("build", gulp.series("clear", "copy", "images", "css", "css2", "css3", "uglify", "html", "clean"));
 
 gulp.task("start", gulp.series("build", "server"));
