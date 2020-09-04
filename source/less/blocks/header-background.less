@@ -225,6 +225,12 @@
     background-position: 210px -17px;
     background-repeat: no-repeat;
     background-size: 593px 700px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+      background-position: 50% center;
+      background-size: cover;
+    }
   }
 
   .header-background__headers {

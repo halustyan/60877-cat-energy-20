@@ -87,10 +87,21 @@
 }
 
 @media (min-width: @mobile) {
+  .page-header__menu-main {
+    display: block;
+  }
+
   .page-header__menu-main--hidden {
     display: none;
   }
 
+  .page-header__logo-mobile_menu span {
+    display: block;
+  }
+
+  .page-header__logo-mobile_menu {
+    display: none;
+  }
   .page-header__logo {
     height: 37px;
     width: 191px;
@@ -160,6 +171,10 @@
   .page-header {
     max-width: 708px;
     margin: 0 auto;
+  }
+
+  .page-header__logo-mobile_menu {
+    display: none;
   }
 
   .page-header__logo {

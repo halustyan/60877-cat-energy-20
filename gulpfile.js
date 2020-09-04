@@ -144,8 +144,9 @@ gulp.task("server", function () {
     ui: false
   });
 
-  gulp.watch("source/less/**/*.less", /*gulp.series("css"),*/ server.reload);
-
+  gulp.watch("source/less/**/*.less").on("change", gulp.series("css", "css2", "css3"));
+  gulp.watch("source/less/**/*.less").on("change", server.reload);
+  gulp.watch("source/*.html").on("change", gulp.series("html"));
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
