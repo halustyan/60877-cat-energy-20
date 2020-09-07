@@ -72,6 +72,20 @@
   border: 1px solid #444444;
   outline: 0;
 }
+.main-form__sub-input-text-email {
+  & + .main-form__email-input-img {
+    fill: black;
+  }
+}
+
+.main-form__sub-input-text-email:focus {
+  border: 1px solid #444444;
+  outline: 0;
+
+  & + .main-form__email-input-img {
+    fill: red;
+  }
+}
 
 .main-form__sub-input-text-telephone:hover {
   border: 1px solid #cdcdcd;
