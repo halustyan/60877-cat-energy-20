@@ -334,3 +334,13 @@
     }
   }
 }
+
+@media (min-width: 1441px) {
+  .header-background::after {
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-desktop@2x.webp");
+      background-position: 40% center;
+      background-size: cover;
+    }
+  }
+}
