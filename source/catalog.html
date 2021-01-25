@@ -1,5 +1,4 @@
 <!doctype html>
-<html lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -491,10 +490,12 @@
           </div>
           <span class="find-all-goods__show-additional-goods">Показать еще 100500 товаров</span>
           <span class="find-all-goods__more-tastes">На самом деле вкусов гораздо больше!</span>
-          <a class="find-all-goods__show-all-goods" href="show-all.html" aria-label="show all button">Показать все</a>
+          <a class="find-all-goods__show-all-goods"  aria-label="show all button">Показать все</a>
+
         </div>
       </section>
     </main>
+
     <section class="additional-goods">
       <h2 class="additional-goods__hidden-header">Additional goods</h2>
       <div class="additional-goods__header">
@@ -652,6 +653,91 @@
         </div>
       </div>
     </footer>
+    <template class="goods-from-server">
+    <div class="main-catalog__good ">
+      <div class="main-catalog__good-content">
+        <div class="main-catalog__good-content-sub-text">
+          <a href="good.html" aria-label="good in catalo one">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)"
+                srcset="img/chicken-small-desktop@1x.webp 1x, img/chicken-small-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/chicken-small-tablet@1x.webp 1x, img/chicken-small-tablet@2x.webp 2x">
+              <source type="image/webp"
+                srcset="img/chicken-small-mobile@1x.webp 1x, img/chicken-small-mobile@2x.webp 2x">
+              <source media="(min-width: 1220px)"
+                srcset="img/chicken-small-desktop@1x.png 1x, img/chicken-small-desktop@2x.png 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/chicken-small-tablet@1x.png 1x, img/chicken-small-tablet@2x.png 2x">
+              <img class="main-catalog__image main-catalog__first-image" src="img/chicken-small-mobile@1x.jpg"
+                srcset="img/chicken-small-mobile@2x.jpg 2x" alt="Первый товар с каталог галереи">
+            </picture>
+          </a>
+          <div class="main-catalog__good-data">
+            <a href="good.html" class="main-catalog__link-to-goods" aria-label="good in catalog two"><span
+              class="main-catalog__good-header">Cat Energy
+            PRO 500 г</span></a>
+            <div class="main-catalog__good-volume main-catalog__good-data-sub">
+              <span class="main-catalog__good-volume-sub main-catalog__less-than-thousand">Объем </span>
+              <span class="main-catalog__good-volume-numbers">500 г </span>
+            </div>
+            <div class="main-catalog__good-taste main-catalog__good-data-sub">
+              <span class="main-catalog__good-taste-sub">Вкус </span>
+              <span class="main-catalog__good-taste-animal">Курица </span>
+            </div>
+            <div class="main-catalog__good-price main-catalog__good-data-sub">
+              <span class="main-catalog__good-price-sub">Цена </span>
+              <span class="main-catalog__good-price-rubles">700 P. </span>
+            </div>
+          </div>
+        </div>
+        <a class="main-catalog__good-order" href="basket.html" aria-label="order button">Заказать</a>
+      </div>
+    </div>
+    </template>
+    <script>
+
+      let xhr = new XMLHttpRequest();
+      xhr.open('GET', 'goods.json');
+      xhr.responseType = 'json';
+      xhr.send();
+      xhr.onload = function() {
+  if (xhr.status != 200) { // анализируем HTTP-статус ответа, если статус не 200, то произошла ошибка
+    alert(`Ошибка ${xhr.status}: ${xhr.statusText}`); // Например, 404: Not Found
+  } else { // если всё прошло гладко, выводим результат
+    alert(`Готово, получили ${xhr.response.length} байт`); // response -- это ответ сервера
+  }
+
+      let show_all = document.querySelector('.find-all-goods__show-all-goods');
+      let goodsContainer = document.querySelector(".main-catalog__goods");
+      let one_good = document.querySelector(".goods-from-server").content.querySelector(".main-catalog__good");
+      let show_all_div = document.querySelector(".find-all-goods");
+
+      //
+      let imgtemplate = document.querySelector(".goods-from-server").content.querySelector(".main-catalog__first-image");
+      let deskriptiontemplate = document.querySelector(".goods-from-server").content.querySelector(".main-catalog__good-header");
+      let capacitytemplate = document.querySelector(".goods-from-server").content.querySelector(".main-catalog__good-volume-numbers");
+      let tastetemplate = document.querySelector(".goods-from-server").content.querySelector(".main-catalog__good-taste-animal");
+      let pricetemplate = document.querySelector(".goods-from-server").content.querySelector(".main-catalog__good-price-rubles");
+      let i = 4;
+            show_all.onclick = function () {
+
+              for (; i<=xhr.response.length; i++) {
+                //animation_goods();
+                show_all_div.before(one_good.cloneNode(true));
+                let srcfromserver = xhr.response[i].src;
+                imgtemplate.src = srcfromserver;
+                deskriptiontemplate.innerHTML = xhr.response[i].deskription;
+                capacitytemplate.innerHTML = xhr.response[i].capacity;
+                tastetemplate.innerHTML = xhr.response[i].taste;
+                pricetemplate.innerHTML = xhr.response[i].price
+              }
+
+            }
+            i = i+4;
+
+};
+                        </script>
     <script src="js/script.min.js"></script>
   </body>
 </html>

@@ -242,5 +242,16 @@
       </div>
     </footer>
     <script src="js/script.min.js"></script>
+    <script>
+
+     let area = document.querySelector('.main-form__commentary-textarea');
+    area.oninput = () => {
+      localStorage.setItem('area', area.value);
+
+    };
+    area.value = localStorage.getItem('area');
+
+
+    </script>
   </body>
 </html>

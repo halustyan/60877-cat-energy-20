@@ -302,13 +302,30 @@
             <div class="live-example__slider-controls">
               <span class="live-example__slider-button live-example__slider-button-became-was">Было</span>
               <div class="live-example__slider-on-off">
-                <div class="live-example__slider-on-off-content">
-                  <div class="live-example__slider-glide-div" tabindex="0"></div>
+                <input type="range" min="1" max="100" value="50" class="live-example__slider-on-content" id="myRange">
+                <!-- <div class="live-example__slider-on-off-content slidecontainer">
+                 <div class="live-example__slider-glide-div" tabindex="0"></div>
                   <img src="img/slider-control.png" alt="slider control" class="live-example__slider-glide-button">
                   <img src="img/in-slider-green.png" alt="in slider green"
                     class="live-example__slider-on-off-content-image">
-                </div>
+                </div>-->
               </div>
+              <script>
+
+let range = document.querySelector('.live-example__slider-on-content');
+let before_cat = document.querySelector('.live-example__slider-before-cat');
+let after_cat = document.querySelector('.live-example__slider-after-cat');
+
+
+range.oninput = function () {
+  after_cat.style.width = range.value+"%";
+  before_cat.style.width = (100 - range.value)+"%";
+if(range.value==0) {
+  before_cat.style.width = 100+"%";
+}
+
+}
+                </script>
               <span class="live-example__slider-button live-example__slider-button-became">Стало</span>
             </div>
           </div>

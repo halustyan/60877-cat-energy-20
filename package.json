@@ -57,6 +57,7 @@
     "node": "8.16"
   },
   "dependencies": {
+    "build": "^0.1.4",
     "svgstore": "^3.0.0-2"
   }
 }

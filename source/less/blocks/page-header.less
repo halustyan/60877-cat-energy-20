@@ -89,6 +89,7 @@
   background-size: 20px 20px;
   width: 20px;
   height: 20px;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .page-header__logo-mobile-menu--hidden {
@@ -109,7 +110,6 @@
   }
 
   .page-header__logo-mobile_menu {
-    display: none;
     margin-top: 0;
     margin-right: 2px;
     border: 0;
@@ -191,6 +191,9 @@
 
   .page-header__menu-main--hidden {
     display: block;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-duration: 1s;
+    animation-direction: reverse;
   }
 
   .page-header__menu-main-sub-menu-elem-link--form {
