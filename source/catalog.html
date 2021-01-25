@@ -719,10 +719,10 @@
       let capacitytemplate = document.querySelector(".goods-from-server").content.querySelector(".main-catalog__good-volume-numbers");
       let tastetemplate = document.querySelector(".goods-from-server").content.querySelector(".main-catalog__good-taste-animal");
       let pricetemplate = document.querySelector(".goods-from-server").content.querySelector(".main-catalog__good-price-rubles");
-      let i = 4;
+
             show_all.onclick = function () {
 
-              for (; i<=xhr.response.length; i++) {
+              for (let i = 0; i<=xhr.response.length; i++) {
                 //animation_goods();
                 show_all_div.before(one_good.cloneNode(true));
                 let srcfromserver = xhr.response[i].src;
@@ -734,7 +734,7 @@
               }
 
             }
-            i = i+4;
+
 
 };
                         </script>
